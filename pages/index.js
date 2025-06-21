@@ -35,7 +35,7 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/u
  * 4. **Run Locally & Preview**
  *    - Start the dev server:
  *        npm run dev
- *    - Open https://capstone-survey-portal.vercel.app/ in your browser.
+ *    - Open http://localhost:3000 in your browser.
  *    - You should see the stakeholder selection and survey interface.
  *
  * 5. **Deploy & Share**
@@ -92,6 +92,7 @@ export default function CapstoneSurveyPortal() {
   const handleSubmit = async () => {
     try {
       const url = process.env.NEXT_PUBLIC_SHEET_API_URL;
+      console.log('🔗 Webhook URL:', url);
       if (!url) throw new Error('NEXT_PUBLIC_SHEET_API_URL not set');
       const payload = assignedQuestions.map(q => ({
         stakeholderId: activeUser,

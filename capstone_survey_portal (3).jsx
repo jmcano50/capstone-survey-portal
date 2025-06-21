@@ -35,7 +35,7 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/u
  * 4. **Run Locally & Preview**
  *    - Start the dev server:
  *        npm run dev
- *    - Open https://capstone-survey-portal.vercel.app/ in your browser.
+ *    - Open http://localhost:3000 in your browser.
  *    - You should see the stakeholder selection and survey interface.
  *
  * 5. **Deploy & Share**

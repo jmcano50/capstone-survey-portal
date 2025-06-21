@@ -41,7 +41,7 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/u
  * 5. **Deploy & Share**
  *    - Push your folder to GitHub.
  *    - On Vercel (or Netlify), import the repo.
- *    - Set environment variable `SHEET_API_URL` to your analytics endpoint.
+ *    - Set environment variable `NEXT_PUBLIC_SHEET_API_URL` to your analytics endpoint.
  *    - Deploy and share the live link.
  *
  * **Note:** All clinic stakeholders (no student roles) and their assigned questions
@@ -91,8 +91,8 @@ export default function CapstoneSurveyPortal() {
 
   const handleSubmit = async () => {
     try {
-      const url = process.env.SHEET_API_URL;
-      if (!url) throw new Error('SHEET_API_URL not set');
+      const url = process.env.NEXT_PUBLIC_SHEET_API_URL;
+      if (!url) throw new Error('NEXT_PUBLIC_SHEET_API_URL not set');
       const payload = assignedQuestions.map(q => ({
         stakeholderId: activeUser,
         stakeholderName: users.find(u => u.id === activeUser).name,

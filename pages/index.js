@@ -91,7 +91,7 @@ export default function CapstoneSurveyPortal() {
 
   const handleSubmit = async () => {
     try {
-      const url = process.env.NEXT_PUBLIC_SHEET_API_URL;
+      const url = '/api/webhook';
       console.log('🔗 Webhook URL:', url);
       if (!url) throw new Error('NEXT_PUBLIC_SHEET_API_URL not set');
       const payload = assignedQuestions.map(q => ({
